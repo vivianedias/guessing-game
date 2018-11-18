@@ -1,6 +1,6 @@
 # Guessing Game
 
-Esse jogo foi proposto em uma aula da { reprograma } sobre NodeJS em que testamos nossas habilidades em JavaScript puro e criar um npm package.
+Esse jogo foi proposto em uma aula da { reprograma } sobre NodeJS em que testamos nossas habilidades em JavaScript puro, além de criar um npm package.
 
 A proposta era criar um jogo para rodar no terminal em que o usuário deve adivinhar o número gerado randomicamente pelo sistema e dependendo de cada resposta dar uma dica se tal chute está acima ou abaixo do número gerado. 
 
