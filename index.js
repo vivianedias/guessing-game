@@ -1,9 +1,11 @@
 /////////////////////////////////////////////////////////////////
-//                       CRIANDO A QUESTÃO
+//               IMPORTANDO MODULO READLINE
 /////////////////////////////////////////////////////////////////
 const readline = require('readline')
-
-const io = readline.createInterface({
+/////////////////////////////////////////////////////////////////
+//                       CRIANDO A QUESTÃO
+/////////////////////////////////////////////////////////////////
+const inputOutput = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -12,7 +14,7 @@ const io = readline.createInterface({
 //                 SELECIONAR DIFICULDADE
 /////////////////////////////////////////////////////////////////
 function selecioneDificuldade(){
-    io.question('Selecione uma dificuldade: Fácil, Médio, Difícil.', (answer) => {
+    inputOutput.question('Selecione uma dificuldade: Fácil, Médio, Difícil.', (answer) => {
         const baixinha = answer.toLowerCase();
         if(baixinha === 'fácil' || baixinha === 'facil'){
             console.log('Você selecionou a dificuldade Fácil!')
@@ -46,7 +48,7 @@ function selecioneDificuldade(){
 //                       PERGUNTA
 /////////////////////////////////////////////////////////////////
 function perguntar() {
-    io.question('Adivinhe um número de 0 a 100!', (answer) => {
+    inputOutput.question('Adivinhe um número de 0 a 100!', (answer) => {
         if (!/^[0-9]+$/.test(answer)){
             console.log('Somente números são caracteres válidos.')
             perguntar();
@@ -83,7 +85,7 @@ function condicoes(answer) {
 //                      JOGAR NOVAMENTE?
 /////////////////////////////////////////////////////////////////
 function jogarNovamente(){
-    io.question('Deseja jogar novamente? Responda "s" para SIM ou "n" para NÃO.', (answer) => aceitou(answer));
+    inputOutput.question('Deseja jogar novamente? Responda "s" para SIM ou "n" para NÃO.', (answer) => aceitou(answer));
 }
 
 function aceitou(answer){
@@ -91,7 +93,7 @@ function aceitou(answer){
     if (baixinha === 's'){
         perguntar();
     } else{
-        io.close();
+        inputOutput.close();
     }
 }
 
